@@ -61,7 +61,7 @@ int write_sig(FILE *fp, int sigType)
       return write4int(fp,sigType);
       break;
   }
-  fprintf( stderr, "Write unknown signature: 0x%08lx\n", sigType );
+  fprintf( stderr, "Write unknown signature: 0x%08x\n", sigType );
 
   return -1;
 }

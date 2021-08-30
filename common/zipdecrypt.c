@@ -242,7 +242,7 @@ FILE	*infile, *outfile;
 
             if( !err && ((lh.gpb[0] & 0x08) == 0x08)) {
                 /* Porcess Data Descriptor structure */
-                err = (!read_ddesc(infile, 0) < 0);
+                err = (!(read_ddesc(infile, 0) < 0));
                 if(!err) err = !write_ddesc(outfile, &ddesc);
                 offset += (ddesc.signature ? 16 : 12);
             }

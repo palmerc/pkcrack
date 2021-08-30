@@ -25,7 +25,7 @@ static void usage( char *name )
     exit( 1 );
 }
 
-void main( int argc, char **argv )
+int main( int argc, char **argv )
 {
 char *	pwd;  
 int	pwdLen, i;
@@ -42,5 +42,7 @@ int	pwdLen, i;
 	updateKeys( pwd[i] );
 
     printf( "%08x %08x %08x\n", key0, key1, key2 );
+
+    return 0;
 }
 

@@ -91,7 +91,7 @@ static void usage( char *prg )
     fprintf( stderr, " -s <size>\textract only specified number of bytes\n" );
 }
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 char	*ret, *outname;
 int	outfile, err=0, i, caseflg=0, size=0;
@@ -152,4 +152,6 @@ int	outfile, err=0, i, caseflg=0, size=0;
     free( ret );
   }
   exit(err);
+
+  return 0;
 }

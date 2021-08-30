@@ -56,7 +56,7 @@ static void usage( char *name )
     exit( 1 );
 }
 
-void main( int argc, char **argv )
+int main( int argc, char **argv )
 {
 uword	key0, key1, key2;
 int	pwdLen=0;
@@ -81,4 +81,7 @@ uword	initBytes;
 	findLongPwd( key0, key1, key2, pwdLen, initBytes );
     else
 	findPwd( key0, key1, key2 );
+
+    return 0;
 }
+

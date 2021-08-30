@@ -129,7 +129,7 @@ static void usage( char *myself )
     fprintf( stderr, " -n\tno progress indicator\n" );
 }
 
-void main( int argc, char **argv )
+int main( int argc, char **argv )
 {
 int		crypt, plain, cryptlength, plainlength;
 struct stat	filestat;
@@ -336,4 +336,7 @@ char		*cFromZIP=NULL, *pFromZIP=NULL, *decryptName=NULL;
     fprintf( stderr, "Finished on %s", ctime(&now) );
 
     exit(0);
+  
+    return 0;
 }
+

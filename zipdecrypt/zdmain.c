@@ -35,7 +35,7 @@ static char RCSID[]="$Id: zdmain.c,v 1.4 2002/12/28 17:01:42 lucifer Exp $";
 
 extern void zipdecrypt( char*infile, char*outfile, int k0, int k1, int k2 );
 
-void main( int argc, char **argv )
+int main( int argc, char **argv )
 {
 char *c;
 
@@ -53,8 +53,10 @@ char *c;
         break;
     default:
         fprintf( stderr, "Usage: %s {<password> | <key0> <key1> <key2>} <cryptedzipfile> <plainzipfile>\n", argv[0] );
-        return;
+        return 0;
     }
 
     zipdecrypt( argv[argc-2], argv[argc-1], key0, key1, key2 );
+
+    return 0;
 }
